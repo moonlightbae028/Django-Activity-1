@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'style.css' %}" rel="stylesheet"> <!-- Linking custom stylesheet -->
+    <title>{% block title %} Products - ArkiFinds {% endblock %}</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="{% url 'base' %}">ArkiFinds</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="{% url 'home_app2' %}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'products_app2' %}">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'contact_app2' %}">Contact</a></li>
+            </ul>
+        </div>
+    </nav>  
+
+    <section class="products-section text-center"><br><br>
+        <div class="container">
+            <h1 class="mb-5">Our Products</h1>
+            <div class="row">
+                <!-- Example Product Item -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <img src="{% static 'app2/images/product1.jpg' %}" class="card-img-top" alt="Product 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Workstation Desk </h5>
+                            <p class="card-text">Elevate your productivity with our versatile Workstation Desk, designed for both comfort and efficiency..</p>
+                            <p class="card-text"><strong>Price:  ₱14,000.00</strong></p>
+                            <button class="btn btn-primary">Add to Cart</button> <!-- Button for cart functionality -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example Product Item -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <img src="{% static 'app2/images/product6.jpg' %}" class="card-img-top" alt="Product 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Bed Trisile</h5>
+                            <p class="card-text">Transform your bedroom into a serene retreat with the Trisile Bed from IKEA. This stylish bed features a modern design with clean lines and a minimalistic aesthetic that fits seamlessly into any decor.</p>
+                            <p class="card-text"><strong>Price: ₱12,000.00</strong></p>
+                            <button class="btn btn-primary">Add to Cart</button> <!-- Button for cart functionality -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example Product Item -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <img src="{% static 'app2/images/product3.jpg' %}" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Norraker Dining Set</h5>
+                            <p class="card-text">Elevate your dining experience with the Norråker Dining Set from IKEA. This beautifully crafted dining set features a sturdy table and matching chairs, all designed with a rustic charm that complements any home decor.</p>
+                            <p class="card-text"><strong>Price: ₱18,500.00</strong></p>
+                            <button class="btn btn-primary">Add to Cart</button> <!-- Button for cart functionality -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more product items as needed -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 ArkiFinds. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
